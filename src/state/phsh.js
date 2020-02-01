@@ -37,15 +37,12 @@ const initialState = createInitialState();
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.PHSH_ANALYZE_REQUEST:
-      console.log("*** REQUEST");
       return { ...state, isAnalyzing: true };
 
     case actionTypes.PHSH_ANALYZE_SUCCESS:
-      console.log("*** SUCCESS", action.payload);
       return { ...state, isAnalyzing: false, isPhishy: action.payload, analysisDone: true};
 
     case actionTypes.PHSH_ANALYZE_FAILURE:
-      console.log("*** FAILURE");
       return { ...state, isAnalyzing: false };
 
     default: {

@@ -2,7 +2,6 @@ import React from 'react';
 
 import LoadingOverlay from 'react-loading-overlay';
 import Rbc from '../rbc/Rbc';
-import Modal from '../Modal';
 
 const PhshOverlay = (options) => {
 

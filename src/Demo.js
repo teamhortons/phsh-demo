@@ -22,7 +22,7 @@ const Demo = () => {
     }, [dispatch]);
 
     return (
-        <Modal/>
+        <Modal analysisDone={analysisDone}/>
         // <PhshOverlay isAnalyzing={isAnalyzing} analysisDone={analysisDone} />
     );
 }
