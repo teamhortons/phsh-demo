@@ -30,6 +30,7 @@ export const actions = {
 export const createInitialState = () => ({
   isAnalyzing: false,
   isPhishy: false,
+  analysisDone: false,
 });
 const initialState = createInitialState();
 
@@ -41,7 +42,7 @@ export const reducer = (state = initialState, action) => {
 
     case actionTypes.PHSH_ANALYZE_SUCCESS:
       console.log("*** SUCCESS", action.payload);
-      return { ...state, isAnalyzing: false, isPhishy: action.payload};
+      return { ...state, isAnalyzing: false, isPhishy: action.payload, analysisDone: true};
 
     case actionTypes.PHSH_ANALYZE_FAILURE:
       console.log("*** FAILURE");
@@ -55,4 +56,5 @@ export const reducer = (state = initialState, action) => {
 
 export const selectors = {
   isAnalyzing: state => state.phsh.isAnalyzing,
+  isAnalysisDone: state => state.phsh.analysisDone,
 };
