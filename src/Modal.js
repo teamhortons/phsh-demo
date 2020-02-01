@@ -42,7 +42,7 @@ const Modal = () => {
                                 <p>We suggest you avoid it.</p>
                                 <div class="modal_context_alternate">
                                     <p>The official website can be found at:</p>
-                                    <a href="https://www.paypal.com/uk/signin">https://www.paypal.com/uk/signin</a>
+                                    <a href="https://www.rbcroyalbank.com/personal.html">https://www.rbcroyalbank.com/personal.html</a>
                                 </div>
                             </div>
                             <button class="proceed_btn">Proceed anyway <span>&#10141;</span></button>
