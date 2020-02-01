@@ -1,15 +1,12 @@
 const getAnalysis = async () => {
-    const url = "https://cors-anywhere.herokuapp.com/iscorsneeded";
-    console.log("before response");
-    const response = setTimeout(async function() {
-        return await fetch(url, {
-            mode: "no-cors"
-        });
-    }, 5000);
-    // const json = await response.json();
-    // console.log("json: ", json);
-    // return json;
-    return response;
+
+    const url = "http://www.omdbapi.com/?apikey=e1e3fd95&t=the";
+    const delay = t => new Promise(resolve => setTimeout(resolve, t)) 
+    const response = await Promise.all([fetch(url), delay(1500)])
+
+    console.log("promiseArr: ", response);
+
+    return true;
 };
 
 export default getAnalysis;

@@ -14,11 +14,8 @@ const Demo = () => {
     ));
 
     useEffect(() => {
-        console.log("useeffect");
         dispatch(phshActions.analyzePage);
     }, [dispatch]);
-
-    console.log("isAnalyzing? ", isAnalyzing);
 
     return (
         <PhshOverlay

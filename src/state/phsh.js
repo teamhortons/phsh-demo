@@ -11,10 +11,7 @@ export const actions = {
   analyzePage: async (dispatch) => {
     dispatch({ type: actionTypes.PHSH_ANALYZE_REQUEST });
     try {
-      
       const response = await getAnalysis();
-      console.log("response: ", response);
-
       dispatch({
         type: actionTypes.PHSH_ANALYZE_SUCCESS,
         payload: response,
@@ -32,6 +29,7 @@ export const actions = {
 /* initial state + reducer */
 export const createInitialState = () => ({
   isAnalyzing: false,
+  isPhishy: false,
 });
 const initialState = createInitialState();
 
@@ -42,8 +40,8 @@ export const reducer = (state = initialState, action) => {
       return { ...state, isAnalyzing: true };
 
     case actionTypes.PHSH_ANALYZE_SUCCESS:
-      console.log("*** SUCCESS");
-      return { ...state, isAnalyzing: false };
+      console.log("*** SUCCESS", action.payload);
+      return { ...state, isAnalyzing: false, isPhishy: action.payload};
 
     case actionTypes.PHSH_ANALYZE_FAILURE:
       console.log("*** FAILURE");
