@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LoadingOverlay from 'react-loading-overlay';
-import Rbc from './Rbc';
+import Rbc from '../rbc/Rbc';
 
 const PhshOverlay = (isActive) => (
     <LoadingOverlay

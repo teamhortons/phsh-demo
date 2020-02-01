@@ -1,3 +1,5 @@
+import getAnalysis from '../phsh/PhshAnalysis';
+
 export const actionTypes = {
   PHSH_ANALYZE_REQUEST: "PHSH_ANALYZE_REQUEST",
   PHSH_ANALYZE_SUCCESS: "PHSH_ANALYZE_SUCCESS",
@@ -6,31 +8,24 @@ export const actionTypes = {
 
 export const actions = {
 
-  // TODO: Add when API call is available
-  // analyzePage: () => async (dispatch) => {
-  //   console.log("--- REQUEST");
-  //   dispatch({ type: actionTypes.PHSH_ANALYZE_REQUEST });
-  //   try {
-  //     console.log("--- SUCCESS");
-  //     const data = "0.99"
-  //     dispatch({
-  //       type: actionTypes.PHSH_ANALYZE_SUCCESS,
-  //       payload: data,
-  //     });
-  //   } catch (error) {
-  //     dispatch({
-  //       type: actionTypes.PHSH_ANALYZE_FAILURE,
-  //     });
-  //   }
-  // },
-
-  analyzePage: () => (dispatch) => {
-    console.log("--- REQUEST");
+  analyzePage: async (dispatch) => {
     dispatch({ type: actionTypes.PHSH_ANALYZE_REQUEST });
-    setTimeout(function () {
-      dispatch({ type: actionTypes.PHSH_ANALYZE_SUCCESS });
-    }, 5000);
-  },
+    try {
+      
+      const response = await getAnalysis();
+      console.log("response: ", response);
+
+      dispatch({
+        type: actionTypes.PHSH_ANALYZE_SUCCESS,
+        payload: response,
+      });
+    } catch (error) {
+      dispatch({
+        type: actionTypes.PHSH_ANALYZE_FAILURE,
+      });
+    }
+
+  }
 
 };
 
