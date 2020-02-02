@@ -4,10 +4,10 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 import createStore from './state/store';
 import Demo from './Demo';
-import PaypalDemo from './PaypalDemo';
+import TdDemo from './TdDemo';
 import history from './history';
 import './rbc/RbcModal.css';
-import './paypal/PaypalModal.css';
+import './td/TdModal.css';
 
 const App = () => (
   <Provider store={createStore()}>
