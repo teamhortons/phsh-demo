@@ -13,12 +13,12 @@ const App = () => (
   <Provider store={createStore()}>
       <Router history={history}>
         <Switch>
-          <Route path='/login'>
+          <Route>
             <Demo />
           </Route>
-          <Route path='/paypal'>
+          {/* <Route path='/paypal'>
             <PaypalDemo />
-          </Route>
+          </Route> */}
         </Switch>
       </Router>
   </Provider>
