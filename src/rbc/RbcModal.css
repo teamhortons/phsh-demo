@@ -1,0 +1,175 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .cont_bgc_modal {
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255, 4, 0, 0.6);
+    opacity: 0.8;
+    z-index: 0;
+    top: 0px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  
+  .cont_bgc_modal_activo {
+    opacity: 0.8;
+  }
+  
+  .cont_modal {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+    display: none;
+  }
+  
+  .cont_modal > .cont_circulo_prohibido {
+    width: 380px;
+    height: 380px;
+    background-color: #ffeeee;
+    border-radius: 50%;
+    border: 55px solid rgba(242, 69, 65, 0.9);
+    transform: scale(0);
+  }
+  
+  .cont_modal_activo > .cont_circulo_prohibido {
+    transform: scale(1);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+  }
+  
+  .cont_raya_divisor {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    background-color: rgba(242, 69, 65, 0.9);
+    transform: rotate(45deg);
+    z-index: 10;
+  }
+  
+  .cont_modal > .cont_circulo_prohibido > .cont_form_modal {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(37, 39, 53);
+    position: absolute;
+    z-index: 1003;
+    top: 50%;
+    left: 50%;
+    margin-top: -190px;
+    margin-left: -150px;
+    box-shadow: 1px 15px 30px -10px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    transform: scale(0);
+  }
+
+  .cont_modal_activo > .cont_circulo_prohibido > .cont_form_modal {
+    transform: scale(1);
+    transition: all 0.5s;
+    transition-delay: 1s;
+  }
+
+  .cont_logo_restrigido {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .cont_circulo_logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 10px solid #f24541;
+  }
+  
+  .con_raya_logo {
+    width: 15px;
+    height: 56px;
+    background-color: #f24541;
+    transform: rotate(45deg);
+  }
+  
+  .modal_contents_text {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.3;
+    font-family: Helvetica;
+  }
+  .modal_contents_text > h1 {
+    font-size: 22px;
+    color: rgba(241, 241, 241, 1);
+  }
+
+  .modal_contents_text > p {
+    margin-top: 14px;
+    color: rgba(241, 241, 241, 1);
+    font-size: 16px;
+  }
+
+  .modal_context_alternate {
+      position: relative;
+      margin-top: 20px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      width: 100%;
+      height: 40%;
+      background-color: rgba(242, 69, 65, 0.9);
+  }
+
+  .modal_context_alternate > p {
+    margin-top: 5px;
+    color: rgba(241, 241, 241, 1);
+    font-size: 14px;
+  }
+  
+  .modal_context_alternate > a {
+    margin-top: 5px;
+    color: rgba(241, 241, 241, 1);
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .cont_modal_activo
+    > .cont_circulo_prohibido
+    > .cont_form_modal
+  
+  .proceed_btn {
+    position: relative;
+    float: none;
+    width: 70%;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid rgba(255, 238, 238, 1);
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 238, 238, 1);
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: Helvetica;
+  }
+  
+  .btn_proceed:hover {
+    background-color: #ffeeee;
+    color: #f24541;
+  }
+  

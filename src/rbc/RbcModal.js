@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Rbc from './rbc/Rbc';
+import Rbc from './Rbc';
 
 function limit_access() {
     document.querySelector(".cont_bgc_modal").style.display = "block";
@@ -13,7 +13,7 @@ function limit_access() {
     }, 100);
 }
 
-const Modal = ({analysisDone}) => {
+const RbcModal = ({analysisDone}) => {
 
     console.log("analysisDone? ", analysisDone);
 
@@ -55,4 +55,4 @@ const Modal = ({analysisDone}) => {
 
 }
 
-export default Modal;
+export default RbcModal;

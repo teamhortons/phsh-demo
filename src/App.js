@@ -4,16 +4,20 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 import createStore from './state/store';
 import Demo from './Demo';
+import PaypalDemo from './PaypalDemo';
 import history from './history';
-import './Modal.css';
-
+import './rbc/RbcModal.css';
+import './paypal/PaypalModal.css';
 
 const App = () => (
   <Provider store={createStore()}>
       <Router history={history}>
         <Switch>
-          <Route>
+          <Route path='/login'>
             <Demo />
+          </Route>
+          <Route path='/paypal'>
+            <PaypalDemo />
           </Route>
         </Switch>
       </Router>
