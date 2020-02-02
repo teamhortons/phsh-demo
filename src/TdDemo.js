@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { actions as phshActions, selectors as phshSelectors } from './state/phsh';
-import PaypalModal from './paypal/PaypalModal';
+import TdModal from './td/TdModal';
 
-const PaypalDemo = () => {
+const TdDemo = () => {
 
     const dispatch = useDispatch();
 
@@ -21,9 +21,9 @@ const PaypalDemo = () => {
     }, [dispatch]);
 
     return (
-        <PaypalModal analysisDone={analysisDone}/>
+        <TdModal analysisDone={analysisDone}/>
         // <PhshOverlay isAnalyzing={isAnalyzing} analysisDone={analysisDone} />
     );
 }
 
-export default PaypalDemo;
+export default TdDemo;

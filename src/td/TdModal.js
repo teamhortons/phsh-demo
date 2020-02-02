@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Paypal from './Paypal';
+import Td from './Td';
 
 function limit_access() {
     document.querySelector(".cont_bgc_modal").style.display = "block";
@@ -13,7 +13,7 @@ function limit_access() {
     }, 100);
 }
 
-const PaypalModal = ({analysisDone}) => {
+const TdModal = ({analysisDone}) => {
 
     console.log("analysisDone? ", analysisDone);
 
@@ -23,7 +23,7 @@ const PaypalModal = ({analysisDone}) => {
 
     return (
         <>
-            <Paypal />
+            <Td />
             <div>
                 <div className="cont_bgc_modal"></div>
                 <div className="cont_modal">
@@ -41,7 +41,7 @@ const PaypalModal = ({analysisDone}) => {
                                 <p>We suggest you avoid it.</p>
                                 <div className="modal_context_alternate">
                                     <p>The official website can be found at:</p>
-                                    <a href="https://www.paypal.com/ca/signin">https://www.paypal.com/ca/signin</a>
+                                    <a href="https://www.td.com/ca/en/personal-banking/">https://www.td.com/ca/en/personal-banking/</a>
                                 </div>
                             </div>
                             <button className="proceed_btn">Proceed anyway <span>&#10141;</span></button>
@@ -55,4 +55,4 @@ const PaypalModal = ({analysisDone}) => {
 
 }
 
-export default PaypalModal;
+export default TdModal;
